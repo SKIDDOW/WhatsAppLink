@@ -1,0 +1,87 @@
+﻿@page "/"
+@using WhatsAppLink.Models;
+@using static WhatsAppLink.Pages.FetchData;
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+<PageTitle>WhatsAppLink</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Small">
+
+    <MudText Typo="Typo.h3" GutterBottom="true">WhatsAppLink</MudText>
+    <MudText Class="mb-8">Chat without adding contacts!</MudText>
+
+    @if (isError)
+    {
+        <MudAlert Severity="Severity.Warning">@error</MudAlert>
+    }    
+
+    <MudStack>
+        <MudItem>
+            <MudSelect Variant="Variant.Outlined" T="string" Label="Country code" @bind-Value="@SelectedCountry">
+                @foreach (var country in countries)
+                {
+                    <MudSelectItem T="string" Value="@country.dial_code">
+                        @($"{country.name} ({country.dial_code})")
+                    </MudSelectItem>        
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem>
+            <MudTextField Variant="Variant.Outlined" @bind-Value="phoneNumber" 
+            Mask="@(new PatternMask("0000000000"))"
+            InputType="InputType.Telephone"
+            Label="Phone number"/>
+        </MudItem>
+
+        <MudItem>
+            <MudTextField Variant="Variant.Outlined" @bind-Value="name" 
+                Label="Name (Optional)"/>
+        </MudItem>
+
+        <MudItem>
+            <MudTextField Variant="Variant.Outlined" @bind-Value="Message" 
+                Label="Message (Optional)"/>
+        </MudItem>
+        
+
+       <MudItem>
+           <MudButton FullWidth="true" Href="@wtsappLink" Target="_blank" OnClick="CreateWhatsAppLink"
+               StartIcon="@Icons.Material.Filled.Whatsapp" 
+               Style="text-transform:none" Color="Color.Primary" 
+               Variant="Variant.Filled">Chat on WhatsApp</MudButton>
+       </MudItem>
+          
+    </MudStack>
+
+    <MudDivider Class="mt-15"></MudDivider>
+
+    <MudTable Breakpoint="Breakpoint.None" Hover="true" Virtualize="true" TItem="Data" Items="@savedData" Dense="true" >
+        @*<HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Name</MudTh>
+            <MudTh>Link</MudTh>
+            <MudTh>Action</MudTh>
+        </HeaderContent>*@
+        <RowTemplate>
+            @*<MudTd>@context.Id</MudTd>*@
+            <MudTd>@context.Name</MudTd>
+            <MudTd >
+                <MudIconButton Href="@context.Link" Target="_blank"
+                   Icon="@Icons.Material.Filled.Whatsapp" 
+                   Style="text-transform:none" Color="Color.Primary" 
+                   Variant="Variant.Text"></MudIconButton>
+            </MudTd>
+            <MudTd > 
+                <MudIconButton  Icon="@Icons.Material.Filled.CopyAll" aria-label="Copy" Color="Color.Primary" OnClick="(args) => CopyLink(context.Link)"></MudIconButton>                
+            </MudTd>
+            <MudTd >
+                <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="Delete" Color="Color.Error" OnClick="(args) => DeleteLink(context)"></MudIconButton>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+
+</MudContainer>
+

@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudTooltip Duration="1000" Text="@themModeText">
+                <MudToggleIconButton Color="Color.Inherit" ToggledChanged="@OnThemeModeChange" Icon="@Icons.Material.Filled.LightMode"
+                                     ToggledIcon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
+        </MudTooltip>
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">WhatsAppLink</MudText>
+        </MudDrawerHeader>
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-5">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
