@@ -1,4 +1,4 @@
-name: www
+name: DeployToGitHubPages
 
 # Run workflow on every push to the master branch
 on:
@@ -36,7 +36,7 @@ jobs:
       run: touch release/wwwroot/.nojekyll
       
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4.4.1
+      uses: crazy-max/ghaction-github-pages@v3
       with:
-        branch: www
+        branch: gh-pages
         folder: release/wwwroot
