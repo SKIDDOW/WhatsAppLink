@@ -94,11 +94,22 @@ public partial class Index
         {
             if(SelectedCountry != null && !string.IsNullOrWhiteSpace(phoneNumber))
             {
+                string _name;
+
+                if(string.IsNullOrWhiteSpace(name))
+                {
+                    _name = phoneNumber;
+                }
+                else
+                {
+                    _name = name;
+                }
+
                 // Create a new Data object with the desired values
                 Data newData = new Data
                 {
                     Id = Guid.NewGuid(),
-                    Name = name,
+                    Name = _name,
                     Link = wtsappLink
                 };
 
