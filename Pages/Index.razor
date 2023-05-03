@@ -19,14 +19,10 @@
 
     <MudStack>
         <MudItem>
-            <MudSelect Variant="Variant.Outlined" T="string" Label="Country code" @bind-Value="@SelectedCountry">
-                @foreach (var country in countries)
-                {
-                    <MudSelectItem T="string" Value="@country.dial_code">
-                        @($"{country.name} ({country.dial_code})")
-                    </MudSelectItem>        
-                }
-            </MudSelect>
+            <MudAutocomplete T="Country" Label="Country code" @bind-Value="selectedCountry" 
+                         SearchFunc="@Search" ToStringFunc="@(e=> e==null?null : $"{e.name} ({e.dial_code})")" 
+                         ResetValueOnEmptyText="@resetValueOnEmptyText"
+                         CoerceText="@coerceText" CoerceValue="@coerceValue" Variant="Variant.Outlined"/>
         </MudItem>
 
         <MudItem>

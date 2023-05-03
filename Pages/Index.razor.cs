@@ -1,9 +1,12 @@
 ﻿using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using MudBlazor;
 using Newtonsoft.Json;
+using System.Net.Http;
 using System.Net.Http.Json;
 using WhatsAppLink.Models;
+using static MudBlazor.CategoryTypes;
 using static WhatsAppLink.Pages.FetchData;
 
 
@@ -19,11 +22,11 @@ public partial class Index
     bool _loading = false;
 
     List<Country> countries = new List<Country>();
-    private string SelectedCountry { get; set; }
+    private Country selectedCountry;
 
     List<Data> savedData = new List<Data>();
     protected override async Task OnInitializedAsync()
-    {
+    {               
         try
         {
             if (await LocalStorage.ContainKeyAsync("data"))
@@ -40,26 +43,8 @@ public partial class Index
 
         try
         {
-            var url = "https://raw.githubusercontent.com/SKIDDOW/WhatsAppLink/main/wwwroot/CountryCodes.json";
-
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-
-                string json = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<List<Country>>(json);
-
-                countries.AddRange(data);
-                //SelectedCountry = countries.FirstOrDefault()?.dial_code;
-
-                //foreach (var country in countries)
-                //{
-                //    error = country.dial_code;
-                //}
-
-            }
-
+            string url = "https://skiddow.github.io/WhatsAppLink/CountryCodes.json";
+            countries = await Http.GetFromJsonAsync<List<Country>>(url);
 
         }
         catch (Exception ex)
@@ -69,20 +54,24 @@ public partial class Index
             StateHasChanged();
         }
     }
+    
 
     string wtsappLink = "#";
     void CreateWhatsAppLink()
     {
-        if (!string.IsNullOrWhiteSpace(Message))
+        if (selectedCountry != null && !string.IsNullOrWhiteSpace(phoneNumber))
         {
-            wtsappLink = "https://wa.me/" + SelectedCountry + phoneNumber + "?text=" + Message;
-        }
-        else
-        {
-            wtsappLink = "https://wa.me/" + SelectedCountry + phoneNumber;
-        }
+            if (!string.IsNullOrWhiteSpace(Message))
+            {
+                wtsappLink = "https://wa.me/" + selectedCountry.dial_code + phoneNumber + "?text=" + Message;
+            }
+            else
+            {
+                wtsappLink = "https://wa.me/" + selectedCountry.dial_code + phoneNumber;
+            }
 
-        SaveData();
+            SaveData();
+        }
     }
 
     [Inject]
@@ -92,7 +81,7 @@ public partial class Index
         //ObjectId _id = ObjectId.GenerateNewId();
         try
         {
-            if(SelectedCountry != null && !string.IsNullOrWhiteSpace(phoneNumber))
+            if(selectedCountry.dial_code != null && !string.IsNullOrWhiteSpace(phoneNumber))
             {
                 string _name;
 
@@ -175,6 +164,19 @@ public partial class Index
         string updatedJson = JsonConvert.SerializeObject(savedData);
         await LocalStorage.SetItemAsStringAsync("data", updatedJson);
         StateHasChanged();
+    }
+
+    private bool resetValueOnEmptyText;
+    private bool coerceText;
+    private bool coerceValue;
+    private async Task<IEnumerable<Country>> Search(string value)
+    {
+        if(value == null)
+        {
+            return await Task.FromResult(countries);
+        }
+
+        return await Task.FromResult(countries.Where(x => x.name.Contains(value, StringComparison.OrdinalIgnoreCase)));
     }
 
 }
