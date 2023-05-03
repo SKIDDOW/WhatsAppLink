@@ -85,7 +85,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-PBouGGCGIKtR\/4Yp2lVrIIKsy12c7x3jiJ\/\/10kz1qs=",
+      "hash": "sha256-yIJCGW2MAFLGMlMI\/r4ZpSZr5bDG4pjrPG6a9Zngow4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -133,7 +133,7 @@
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.dll"
     },
     {
-      "hash": "sha256-S5crVLoRt9bTJXCLy9+PCpBhhZcgv5DPtiQH0VUJIJo=",
+      "hash": "sha256-Tp1e79rdWSM\/206oJ3McKHUyb\/06z+xSgUk1Bk4M+14=",
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
@@ -157,7 +157,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-lCjKdgF1km0uxRkE\/hbJEKkQ4QRCu5u47OkV8JXnarE=",
+      "hash": "sha256-WLvAavf0VvzyTHdNQSOcnySDd\/vhLS0YPIusaILkzSU=",
       "url": "_framework\/MudBlazor.dll"
     },
     {
@@ -221,7 +221,7 @@
       "url": "_framework\/System.Drawing.Primitives.dll"
     },
     {
-      "hash": "sha256-XyE2cjoKf9VQzibc7c9mqr8ZGdSL80Jhq8xMmFbWQXY=",
+      "hash": "sha256-t2DyOVJnsTiqiNjVsGAj18wiUDxPyyt56j\/jfzWWb9E=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -233,7 +233,7 @@
       "url": "_framework\/System.Memory.dll"
     },
     {
-      "hash": "sha256-asF5bVISNgXObC4atI+fjbGGXtZ5FB39lsiD5wQtSMM=",
+      "hash": "sha256-KLyvvMCdvG\/qzv+MWubURdhsKmaFw0PpE37hO08oSl4=",
       "url": "_framework\/System.Net.Http.dll"
     },
     {
@@ -337,7 +337,7 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-64tbMR19tTucdFGrfV208pLvBidiCJ1WDnRijk0pyG4=",
+      "hash": "sha256-35NhT1+kIhGfXYMIjpsh31NECl+iPUWoGQ3ZAN\/N2Uc=",
       "url": "_framework\/WhatsAppLink.dll"
     },
     {
@@ -349,5 +349,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "8l9Xtl2A"
+  "version": "930Ek56q"
 };
