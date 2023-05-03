@@ -36,7 +36,7 @@ jobs:
       run: touch release/wwwroot/.nojekyll
       
     - name: Deploy to GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v3
+      uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
-        target_branch: gh-pages
-        build_dir: release/wwwroot
+        branch: gh-pages
+        folder: release/wwwroot
