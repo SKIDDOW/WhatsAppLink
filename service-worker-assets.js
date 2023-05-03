@@ -81,7 +81,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-HYHUpKG\/hAaC8gms5g1NjsCMkCOhBEzXBVUaof7TgbU=",
+      "hash": "sha256-PBouGGCGIKtR\/4Yp2lVrIIKsy12c7x3jiJ\/\/10kz1qs=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -333,7 +333,7 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-iy70lgAJOWTLaWqI8iqJB8IbMmQRnOBSaw0feEMus3Y=",
+      "hash": "sha256-64tbMR19tTucdFGrfV208pLvBidiCJ1WDnRijk0pyG4=",
       "url": "_framework\/WhatsAppLink.dll"
     },
     {
@@ -345,5 +345,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "akkVoysz"
+  "version": "OUGQUWcw"
 };
