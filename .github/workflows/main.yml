@@ -38,5 +38,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v3
       with:
-        branch: gh-pages
-        folder: release/wwwroot
+        target_branch: gh-pages
+        build_dir: release/wwwroot
