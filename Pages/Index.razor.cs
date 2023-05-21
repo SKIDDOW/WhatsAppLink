@@ -43,7 +43,7 @@ public partial class Index
 
         try
         {
-            string url = "https://skiddow.github.io/WhatsAppLink/CountryCodes.json";
+            string url = "https://wal.smalltaskforce.com/CountryCodes.json";
             countries = await Http.GetFromJsonAsync<List<Country>>(url);
 
         }
