@@ -23,9 +23,9 @@ jobs:
     - name: Publish .NET Project
       run: dotnet publish WhatsAppLink.csproj -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'skiddow.github.io/whatsapplink' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to /WhatsAppLink/
-      run: sed -i 's/<base href="\/" \/>/<base href="\/WhatsAppLink\/" \/>/g' release/wwwroot/index.html
+    # changes the base-tag in index.html from '/' to 'wal.smalltaskforce.com' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to wal.smalltaskforce.com
+      run: sed -i 's/<base href="\/" \/>/<base href="wal.smalltaskforce.com" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
