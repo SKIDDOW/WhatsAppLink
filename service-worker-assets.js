@@ -85,7 +85,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-17DDxcs\/+SO\/fZ+pgfjOTR\/pLKxnA\/DcOtZcorpIhLQ=",
+      "hash": "sha256-oCLJuoyjVe3O1k1BD2HImDlX020vi6GlZBrhfIM0lSo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -101,7 +101,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "hash": "sha256-NkDyV73rhzUUx7KZ4f\/ueY\/WwAY1L4R90LbwQ1neeWM=",
+      "hash": "sha256-jcapI+\/5cNPBG\/isZTJCDl\/FkPtv822mnwoXZwrr\/mg=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -337,7 +337,7 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-5gXXdLsCQbE3zQNPLCngC+aIuwIfqhaUCPZCjZyaBxA=",
+      "hash": "sha256-vaj98uCn0A9yqLrPIsODOjVDEb8cMFj0+Uv\/62X7vhs=",
       "url": "_framework\/WhatsAppLink.dll"
     },
     {
@@ -349,5 +349,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "zmkf70qX"
+  "version": "vXPxCJaI"
 };

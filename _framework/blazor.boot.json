@@ -10,7 +10,7 @@
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
       "Microsoft.AspNetCore.Components.dll": "sha256-wJnuKFOKiGJCfhdftxTv2wbZlA4wsv+zHY5EVgOFs0g=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-wcPyGU\/T7lzlTPNy+M4AeOL1yYc7qTSAkQwoYJPJdO0=",
-      "Microsoft.AspNetCore.Components.Web.dll": "sha256-NkDyV73rhzUUx7KZ4f\/ueY\/WwAY1L4R90LbwQ1neeWM=",
+      "Microsoft.AspNetCore.Components.Web.dll": "sha256-jcapI+\/5cNPBG\/isZTJCDl\/FkPtv822mnwoXZwrr\/mg=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-IiCeDD2\/cESvpd281cmPUvaLlj5RlX\/Gy2c0FzTfcec=",
       "Microsoft.CSharp.dll": "sha256-3Tx67OFC357JUOENi2kemV6iWM6LD0ahMMHeJ8ah+cc=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-X\/f4fDl2cuIRXeWHhK\/f2UqQbFioD+RU4a4CEh0zrrQ=",
@@ -69,7 +69,7 @@
       "System.Xml.Linq.dll": "sha256-A4CODzYb1u9XpUZmVzurgU7y8PBOj9tm7Ru5VFqAE8g=",
       "System.Xml.ReaderWriter.dll": "sha256-EgcCS1RFY20HzgANsBJtLJ8EBz4+gHvj0\/+q7sbMxdE=",
       "System.Xml.XDocument.dll": "sha256-3pI9P6qIIlLGS33fj1MHYWw1Bv34aJnaRy5f8AbJpFc=",
-      "WhatsAppLink.dll": "sha256-5gXXdLsCQbE3zQNPLCngC+aIuwIfqhaUCPZCjZyaBxA="
+      "WhatsAppLink.dll": "sha256-vaj98uCn0A9yqLrPIsODOjVDEb8cMFj0+Uv\/62X7vhs="
     },
     "extensions": null,
     "lazyAssembly": null,
