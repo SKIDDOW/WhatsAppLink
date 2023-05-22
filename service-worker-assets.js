@@ -85,7 +85,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-oCLJuoyjVe3O1k1BD2HImDlX020vi6GlZBrhfIM0lSo=",
+      "hash": "sha256-p5eYgAe72GGJpKNpJdA+lVq0pTRK9KPQotB6lfYXiyA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -157,7 +157,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-WLvAavf0VvzyTHdNQSOcnySDd\/vhLS0YPIusaILkzSU=",
+      "hash": "sha256-EZQo0HjyQ87Czlfj8TW0OdZxHMuKY3O4MBBVaZo5\/6o=",
       "url": "_framework\/MudBlazor.dll"
     },
     {
@@ -337,7 +337,7 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-vaj98uCn0A9yqLrPIsODOjVDEb8cMFj0+Uv\/62X7vhs=",
+      "hash": "sha256-WwHR0HfuRqyNaAPfMJjO6FcnnJ9LfEudMBxRJJ5xkwM=",
       "url": "_framework\/WhatsAppLink.dll"
     },
     {
@@ -349,5 +349,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "vXPxCJaI"
+  "version": "yUr5mPQx"
 };

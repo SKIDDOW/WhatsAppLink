@@ -24,7 +24,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-eXvGx2jcjpTPEJoAHBsW\/VuMPbNyyU+AsuhPmkzSSRY=",
       "Microsoft.JSInterop.dll": "sha256-hGoyKDBCXmGtWCJZvTUdir+k8j7ndN447HcXatfmwwU=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-3+dHa65PgCYOsUMlsJSDYPxt294+nWZxeMbopoWb+fA=",
-      "MudBlazor.dll": "sha256-WLvAavf0VvzyTHdNQSOcnySDd\/vhLS0YPIusaILkzSU=",
+      "MudBlazor.dll": "sha256-EZQo0HjyQ87Czlfj8TW0OdZxHMuKY3O4MBBVaZo5\/6o=",
       "Newtonsoft.Json.dll": "sha256-IsZJ91\/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
       "System.Collections.Concurrent.dll": "sha256-BPpPc0xPEpC\/F3nTDHC4EJMoDIrPeM7O7wpI26kVGIg=",
       "System.Collections.dll": "sha256-4vhd2E7\/GKHYe1F4jqYLmqEgzdpEkLl9pVLZsNYiGoQ=",
@@ -69,7 +69,7 @@
       "System.Xml.Linq.dll": "sha256-A4CODzYb1u9XpUZmVzurgU7y8PBOj9tm7Ru5VFqAE8g=",
       "System.Xml.ReaderWriter.dll": "sha256-EgcCS1RFY20HzgANsBJtLJ8EBz4+gHvj0\/+q7sbMxdE=",
       "System.Xml.XDocument.dll": "sha256-3pI9P6qIIlLGS33fj1MHYWw1Bv34aJnaRy5f8AbJpFc=",
-      "WhatsAppLink.dll": "sha256-vaj98uCn0A9yqLrPIsODOjVDEb8cMFj0+Uv\/62X7vhs="
+      "WhatsAppLink.dll": "sha256-WwHR0HfuRqyNaAPfMJjO6FcnnJ9LfEudMBxRJJ5xkwM="
     },
     "extensions": null,
     "lazyAssembly": null,
