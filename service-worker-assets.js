@@ -37,7 +37,7 @@
       "url": "images\/mstile-150x150.png"
     },
     {
-      "hash": "sha256-yXwlU2CuMW4OE+39VnucZJLI6gE1UeVyhO6mRiYRMKU=",
+      "hash": "sha256-1zKmHsTHvEYJOwY3Gqpwkvni2KBoIkn1YTKnrfDJxTY=",
       "url": "index.html"
     },
     {
@@ -85,7 +85,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-p5eYgAe72GGJpKNpJdA+lVq0pTRK9KPQotB6lfYXiyA=",
+      "hash": "sha256-I\/N398YUkVRxGpbwBp6Mcnc9aHwM7Z65vuyBqApoLtI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -337,7 +337,7 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-WwHR0HfuRqyNaAPfMJjO6FcnnJ9LfEudMBxRJJ5xkwM=",
+      "hash": "sha256-5nFt7MoYfUr4x3gH1UWfdX0IDVL2SJA8IetSBtU4mQ8=",
       "url": "_framework\/WhatsAppLink.dll"
     },
     {
@@ -349,5 +349,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "yUr5mPQx"
+  "version": "zH+ydiPV"
 };
