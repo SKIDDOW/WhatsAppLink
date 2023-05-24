@@ -55,29 +55,6 @@ public partial class Index
         }
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await JSRuntime.InvokeVoidAsync("eval", @"
-                window.addEventListener('beforeinstallprompt', (event) => {
-                    // Prevent the default behavior to suppress the automatic prompt
-                    event.preventDefault();
-                    // Save the event for later use
-                    window.beforeInstallPromptEvent = event;
-                });
-
-                window.installApp = async () => {
-                    const beforeInstallPromptEvent = window.beforeInstallPromptEvent;
-                    if (beforeInstallPromptEvent) {
-                        await beforeInstallPromptEvent.prompt();
-                    }
-                };
-            ");
-        }
-    }
-
-
     string wtsappLink = "#";
     void CreateWhatsAppLink()
     {
@@ -199,22 +176,5 @@ public partial class Index
         }
 
         return await Task.FromResult(countries.Where(x => x.name.Contains(value, StringComparison.OrdinalIgnoreCase)));
-    }
-
-    protected async Task InstallApp()
-    {
-        await JSRuntime.InvokeVoidAsync("eval", @"
-            const installApp = document.getElementById('installApp');
-
-            installApp.addEventListener('click', async () => {
-                if (window.deferredPrompt !== null) {
-                    window.deferredPrompt.prompt();
-                    const { outcome } = await window.deferredPrompt.userChoice;
-                    if (outcome === 'accepted') {
-                        window.deferredPrompt = null;
-                    }
-                }
-            });
-        ");
-    }
+    }    
 }
