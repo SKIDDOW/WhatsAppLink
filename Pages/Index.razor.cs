@@ -73,6 +73,36 @@ public partial class Index
         }
     }
 
+    async void CreateLinkAndCopy()
+    {
+        string link;
+        if (selectedCountry != null && !string.IsNullOrWhiteSpace(phoneNumber))
+        {
+            if (!string.IsNullOrWhiteSpace(Message))
+            {
+                link = "https://wa.me/" + selectedCountry.dial_code + phoneNumber + "?text=" + Message;
+            }
+            else
+            {
+                link = "https://wa.me/" + selectedCountry.dial_code + phoneNumber;
+            }
+
+
+            try
+            {
+                await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", link);
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                StateHasChanged();
+                isError = true;
+            }
+
+            SaveData();
+        }
+    }
+
     [Inject]
     public ILocalStorageService LocalStorage { get; set; }
     async void SaveData()
